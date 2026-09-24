@@ -20,11 +20,14 @@ class MainActivity : AppCompatActivity() {
             textView.text = "Hello from my app!"
         }
 
+
         val buttonColor = findViewById<Button>(R.id.buttonColor)
 
         buttonColor.setOnClickListener {
             textView.setTextColor(Color.RED)
         }
+
+        //Code for revert
 
         val buttonBackground = findViewById<Button>(R.id.buttonBackground)
         val rootLayout = findViewById<View>(R.id.rootLayout)
