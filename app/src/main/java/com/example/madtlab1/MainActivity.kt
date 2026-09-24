@@ -5,6 +5,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import android.graphics.Color
+import android.view.View
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val button = findViewById<Button>(R.id.Button)
-        val textView = findViewById<TextView>(R.id.Button)
+        val textView = findViewById<TextView>(R.id.TextView)
 
         button.setOnClickListener {
             textView.text = "Hello from my app!"
@@ -23,6 +24,13 @@ class MainActivity : AppCompatActivity() {
 
         buttonColor.setOnClickListener {
             textView.setTextColor(Color.RED)
+        }
+
+        val buttonBackground = findViewById<Button>(R.id.buttonBackground)
+        val rootLayout = findViewById<View>(R.id.rootLayout)
+
+        buttonBackground.setOnClickListener {
+            rootLayout.setBackgroundColor(Color.YELLOW)
         }
     }
 }
